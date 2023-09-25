@@ -5759,7 +5759,7 @@ Pantalla_Vanisados As screen:
                     HoverBorderColor: =RGBA(255, 255, 255, 1)
                     HoverColor: =RGBA(51, 51, 51, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
-                    Items: =["V 78/2","V 44/2"]
+                    Items: =["Tipo Vanizado","V 78/2","V 44/2","elastico","lycra"]
                     OnChange: =Set(selectedMat,Dropdown1_5.Selected.Value)
                     OnSelect: =Set(selectedMat,Dropdown1_5.Selected.Value)
                     PaddingBottom: =5
