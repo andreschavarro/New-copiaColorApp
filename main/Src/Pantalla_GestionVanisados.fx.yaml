@@ -1133,7 +1133,7 @@ Pantalla_GestionVanisados As screen:
             TemplatePadding: =0
             TemplateSize: =155
             Width: =1562
-            X: =31
+            X: =17
             Y: =55
             ZIndex: =1
 
@@ -1315,7 +1315,15 @@ Pantalla_GestionVanisados As screen:
             HoverFill: =RGBA(0, 0, 0, 1)
             OnSelect: |-
                 =Get_Users.Run();
-                Notify("Usuarios actulizados con existo" , NotificationType.Success,2000)
+                Notify(
+                    "Usuarios actulizados con existo",
+                    NotificationType.Success,
+                    2000
+                );
+                Set(
+                    VariableMostrarGIF,
+                    false
+                )
             PressedBorderColor: =
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(0, 0, 0, 1)
@@ -1326,9 +1334,28 @@ Pantalla_GestionVanisados As screen:
             Size: =15
             Text: ="Actualizar"
             Width: =144
-            X: =1402
-            Y: =15
+            X: =1385
+            Y: =49
             ZIndex: =4
+
+        Image3 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =416
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: =VAyR
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =VariableMostrarGIF
+            Width: =666
+            X: =534
+            Y: =72
+            ZIndex: =5
 
     ContainerRGB As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light

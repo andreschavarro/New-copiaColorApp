@@ -770,7 +770,7 @@ Pantalla_Vanisados As screen:
                 HoverColor: =RGBA(184, 149, 9, 1)
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Icon: =Icon.Lightbulb
-                OnSelect: |-
+                OnSelect: |+
                     =Set(
                         contenedorVisible,
                         true
@@ -799,10 +799,17 @@ Pantalla_Vanisados As screen:
                     Set(
                         VarOcultar,
                         false
-                    )
+                    );
+                    
+                    
+                    
+                    
+                    
+                    
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
+                Visible: =If(color_var = ThisItem.V782, false, true)
                 Width: =25
                 X: =279
                 Y: =133
@@ -5662,149 +5669,84 @@ Pantalla_Vanisados As screen:
                 Y: =124
                 ZIndex: =14
 
-            "'Contenedor sugerencia valisado' As groupContainer.manualLayoutContainer":
-                DropShadow: =DropShadow.Light
-                Height: =219
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Visible: =contsugerencia
-                Width: =253
-                X: =412
-                Y: =113
-                ZIndex: =18
+            Icon6 As icon.Add:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =55
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Add
+                OnSelect: |-
+                    =UpdateContext({ sugMaterial: !sugMaterial })
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =55
+                X: =423
+                Y: =109
+                ZIndex: =15
 
-                Dropdown1_4 As dropdown:
-                    BorderColor: =RGBA(230, 230, 230, 1)
-                    BorderThickness: =1
-                    ChevronBackground: =RGBA(255, 255, 255, 1)
-                    ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-                    ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-                    ChevronFill: =RGBA(33, 33, 33, 1)
-                    ChevronHoverBackground: =RGBA(0, 0, 0, 1)
-                    ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                    Color: =RGBA(51, 51, 51, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    Font: =Font.'Segoe UI'
-                    HoverBorderColor: =RGBA(255, 255, 255, 1)
-                    HoverColor: =RGBA(51, 51, 51, 1)
-                    HoverFill: =RGBA(255, 255, 255, 1)
-                    Items: |-
-                        =
-                        Distinct(GestionVanisadosDEV , materiaPrima)
-                    OnChange: =Set(selectedMat,Dropdown1_4.Selected.Value)
-                    OnSelect: =Set(selectedMat,Dropdown1_4.Selected.Value)
-                    PaddingBottom: =5
-                    PaddingLeft: =12
-                    PaddingRight: =5
-                    PaddingTop: =5
-                    PressedBorderColor: =RGBA(0, 0, 0, 1)
-                    PressedColor: =RGBA(0, 0, 0, 1)
-                    PressedFill: =RGBA(212, 212, 212, 1)
-                    SelectionColor: =RGBA(0, 0, 0, 1)
-                    SelectionFill: =RGBA(230, 230, 230, 1)
-                    Size: =13
-                    Visible: |-
-                        =true
-                        //If(IsBlank(VarMateriaP);true;false)
-                    Width: =180
-                    X: =37
-                    Y: =20
-                    ZIndex: =1
-
-                TextInput3 As text:
-                    BorderColor: =RGBA(166, 166, 166, 1)
-                    BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
-                    Default: ="Ingresa tu vanisado"
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    Height: =36
-                    HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                    HoverColor: =RGBA(51, 51, 51, 1)
-                    HoverFill: =RGBA(255, 255, 255, 1)
-                    PressedBorderColor: =RGBA(0, 120, 212, 1)
-                    PressedColor: =RGBA(51, 51, 51, 1)
-                    PressedFill: =RGBA(255, 255, 255, 1)
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
-                    Size: =13
-                    Width: =186
-                    X: =31
-                    Y: =179
-                    ZIndex: =2
-
-                Dropdown1_5 As dropdown:
-                    BorderColor: =RGBA(230, 230, 230, 1)
-                    BorderThickness: =1
-                    ChevronBackground: =RGBA(255, 255, 255, 1)
-                    ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-                    ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-                    ChevronFill: =RGBA(33, 33, 33, 1)
-                    ChevronHoverBackground: =RGBA(0, 0, 0, 1)
-                    ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                    Color: =RGBA(51, 51, 51, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    Font: =Font.'Segoe UI'
-                    HoverBorderColor: =RGBA(255, 255, 255, 1)
-                    HoverColor: =RGBA(51, 51, 51, 1)
-                    HoverFill: =RGBA(255, 255, 255, 1)
-                    Items: =["V 78/2","V 44/2"]
-                    OnChange: =Set(selectedMat,Dropdown1_5.Selected.Value)
-                    OnSelect: =Set(selectedMat,Dropdown1_5.Selected.Value)
-                    PaddingBottom: =5
-                    PaddingLeft: =12
-                    PaddingRight: =5
-                    PaddingTop: =5
-                    PressedBorderColor: =RGBA(0, 0, 0, 1)
-                    PressedColor: =RGBA(0, 0, 0, 1)
-                    PressedFill: =RGBA(212, 212, 212, 1)
-                    SelectionColor: =RGBA(0, 0, 0, 1)
-                    SelectionFill: =RGBA(230, 230, 230, 1)
-                    Size: =13
-                    Visible: |-
-                        =true
-                        //If(IsBlank(VarMateriaP);true;false)
-                    Width: =180
-                    X: =37
-                    Y: =86
-                    ZIndex: =3
-
-            Button10 As button:
-                BorderColor: =RGBA(0, 0, 0, 0)
+            Dropdown1_2 As dropdown:
+                BorderColor: =RGBA(230, 230, 230, 1)
+                BorderThickness: =1
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                ChevronFill: =RGBA(33, 33, 33, 1)
+                ChevronHoverBackground: =RGBA(0, 0, 0, 1)
+                ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                Color: =RGBA(51, 51, 51, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =RGBA(0, 120, 212, 1)
-                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
                 Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+                HoverBorderColor: =RGBA(255, 255, 255, 1)
+                HoverColor: =RGBA(51, 51, 51, 1)
+                HoverFill: =RGBA(255, 255, 255, 1)
+                Items: =Distinct(GestionVanisadosDEV , materiaPrima)
+                OnChange: =Set(selectedMat,Dropdown1_2.Selected.Value)
                 OnSelect: |-
-                    =UpdateContext( {contsugerencia: !contsugerencia } )
-                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-                PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =15
-                Text: ="recomendar"
-                Tooltip: ="Sugerir vanisado en una materia prima diferente"
-                X: =449
-                Y: =60
-                ZIndex: =19
+                    =Set(
+                        selectedMat,
+                        Dropdown1_2.Selected.Value
+                    );
+                    Set(
+                        matsugerida,
+                        Label3_9.Text
+                    )
+                PaddingBottom: =5
+                PaddingLeft: =12
+                PaddingRight: =5
+                PaddingTop: =5
+                PressedBorderColor: =RGBA(0, 0, 0, 1)
+                PressedColor: =RGBA(0, 0, 0, 1)
+                PressedFill: =RGBA(212, 212, 212, 1)
+                SelectionColor: =RGBA(0, 0, 0, 1)
+                SelectionFill: =RGBA(230, 230, 230, 1)
+                Size: =13
+                Visible: =sugMaterial
+                Width: =180
+                X: =514
+                Y: =124
+                ZIndex: =16
+
+    Label8 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =13
+        Text: =color_var
+        X: =879
+        Y: =119
+        ZIndex: =8
 

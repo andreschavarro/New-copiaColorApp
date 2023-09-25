@@ -130,9 +130,7 @@
       "Roles_Dev"
     ],
     "dependencies": {},
-    "dependents": [
-      "7f2dc4a9-8f02-4ef5-9e07-ae7ce80784ed"
-    ],
+    "dependents": [],
     "id": "1978edba-129a-4788-ac84-95c33de78f45"
   },
   "5397bef3-3a93-4303-b144-6bd2d3016aae": {
@@ -155,24 +153,6 @@
     "dependencies": {},
     "dependents": [],
     "id": "5397bef3-3a93-4303-b144-6bd2d3016aae"
-  },
-  "71f76279-73a5-4119-ae0e-afb38ca3f6b0": {
-    "appActions": [],
-    "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "Power Apps para creadores",
-      "iconUri": "https://connectoricons-prod.azureedge.net/u/shgogna/globalperconnector-train1/1.0.1639.3312/powerappsforappmakers/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_powerappsforappmakers",
-      "parameterHints": {},
-      "parameterHintsV2": {}
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "7f2dc4a9-8f02-4ef5-9e07-ae7ce80784ed"
-    ],
-    "id": "71f76279-73a5-4119-ae0e-afb38ca3f6b0"
   },
   "7df666c6-7d79-4d58-b33b-d82d977c2d79": {
     "appActions": [
@@ -203,51 +183,6 @@
     "dependencies": {},
     "dependents": [],
     "id": "7df666c6-7d79-4d58-b33b-d82d977c2d79"
-  },
-  "7f2dc4a9-8f02-4ef5-9e07-ae7ce80784ed": {
-    "appActions": [
-      "Run"
-    ],
-    "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "Flujos lógicos",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "1978edba-129a-4788-ac84-95c33de78f45": {
-          "value": "shared_sharepointonline"
-        },
-        "71f76279-73a5-4119-ae0e-afb38ca3f6b0": {
-          "value": "shared_powerappsforappmakers_1"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "2f3ec468-ad77-49b7-8a40-b272a6431aca"
-        }
-      },
-      "parameterHintsV2": {
-        "shared_powerappsforappmakers_1": {
-          "value": "71f76279-73a5-4119-ae0e-afb38ca3f6b0"
-        },
-        "shared_sharepointonline": {
-          "value": "1978edba-129a-4788-ac84-95c33de78f45"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "2f3ec468-ad77-49b7-8a40-b272a6431aca"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "Get_Users"
-    ],
-    "dependencies": {
-      "shared_powerappsforappmakers_1": "71f76279-73a5-4119-ae0e-afb38ca3f6b0",
-      "shared_sharepointonline": "1978edba-129a-4788-ac84-95c33de78f45"
-    },
-    "dependents": [],
-    "id": "7f2dc4a9-8f02-4ef5-9e07-ae7ce80784ed"
   },
   "b6965406-cef4-4463-b637-dee95013238d": {
     "appActions": [
