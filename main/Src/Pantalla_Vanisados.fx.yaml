@@ -5433,9 +5433,13 @@ Pantalla_Vanisados As screen:
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
+                OnSelect: |
+                    =false
                 Size: =13
                 Text: =VarMateriaP
-                Visible: =If(!IsBlank(VarMateriaP),true,false)
+                Visible: |
+                    =!sugMaterial&&
+                    If(!IsBlank(VarMateriaP),true,false)
                 Width: =180
                 X: =196
                 Y: =124
@@ -5687,8 +5691,8 @@ Pantalla_Vanisados As screen:
                 PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
                 Width: =55
-                X: =423
-                Y: =109
+                X: =417
+                Y: =89
                 ZIndex: =15
 
             Dropdown1_2 As dropdown:
@@ -5732,8 +5736,25 @@ Pantalla_Vanisados As screen:
                 Visible: =sugMaterial
                 Width: =180
                 X: =514
-                Y: =124
+                Y: =104
                 ZIndex: =16
+
+            Label10 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(255, 255, 255, 1)
+                BorderThickness: =1
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Size: =13
+                Text: = selectedMat
+                Visible: =sugMaterial
+                Width: =180
+                X: =197
+                Y: =124
+                ZIndex: =17
 
     Label8 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
