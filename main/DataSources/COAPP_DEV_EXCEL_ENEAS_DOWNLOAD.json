@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "2d2fe9cb-f2c2-4146-bbf6-d74732ce6f26",
+    "Name": "COAPP_DEV_EXCEL_ENEAS_DOWNLOAD",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": null
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "3fd42788-2207-44a9-ab2f-9e4cc30f56b4",
+    "Name": "COAPP_DEV_SUGERENCIA_VANISADOS",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": null
+  }
+]

@@ -1,0 +1,29 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |
+        =Set(tipoColor , "Pantone");
+        Set(tipoColorFlujo , "pantone");
+        Collect(
+            DatosUsoColorApp,
+            {
+                User: Text(User().FullName),
+                TipoRegistro: "Open",
+                FechaHora: Now()
+            }
+        );
+        ClearCollect(
+            adminUsers,
+            Filter(
+                Roles_Dev,
+                Rol_usuario = "Administrador"
+            )
+        );
+    Theme: =PowerAppsTheme
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

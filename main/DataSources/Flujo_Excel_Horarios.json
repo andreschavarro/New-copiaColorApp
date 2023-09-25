@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "a236ae7a-2504-460a-9469-856775c30b7e",
+    "Name": "Flujo_Excel_Horarios",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "15764c90-9697-ed11-aad1-0022481ffddb"
+  }
+]
