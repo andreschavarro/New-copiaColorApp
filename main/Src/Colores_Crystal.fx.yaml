@@ -125,8 +125,8 @@ Colores_Crystal As screen:
             Height: =59
             Size: =18
             Text: =User().FullName
-            Width: =400
-            X: =1123
+            Width: =387
+            X: =1073
             ZIndex: =5
 
         Button11_7 As button:
@@ -233,6 +233,24 @@ Colores_Crystal As screen:
                 Width: =270
                 Y: =3
                 ZIndex: =1
+
+        Image7 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =40
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: =charla
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =80
+            X: =1460
+            Y: =10
+            ZIndex: =13
 
     Container_FiltrosColorcrystal As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
