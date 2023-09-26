@@ -765,19 +765,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Colores_Crystal.Image2.AccessibleLabel"
+                  "fullyQualifiedName": "Colores_Crystal.Container_barraNavegacionColoresCrystal.Image14.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Colores_Crystal.Image2.AccessibleLabel",
+                  "fullyQualifiedName": "Colores_Crystal.Container_barraNavegacionColoresCrystal.Image14.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "AccessibleLabel",
+                "member": "TabIndex",
                 "module": "Colores_Crystal",
-                "type": "Colores_Crystal.Image2"
+                "type": "Colores_Crystal.Container_barraNavegacionColoresCrystal.Image14"
               }
             }
           ],
@@ -787,27 +787,27 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Colores_Crystal.Image2.TabIndex"
+                  "fullyQualifiedName": "Colores_Crystal.Container_barraNavegacionColoresCrystal.Image7.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Colores_Crystal.Image2.TabIndex",
+                  "fullyQualifiedName": "Colores_Crystal.Container_barraNavegacionColoresCrystal.Image7.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Colores_Crystal",
-                "type": "Colores_Crystal.Image2"
+                "type": "Colores_Crystal.Container_barraNavegacionColoresCrystal.Image7"
               }
             }
           ],
@@ -1065,19 +1065,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Colores_Crystal.Container2.TextInput1_5.AccessibleLabel"
+                  "fullyQualifiedName": "Colores_Crystal.Container_barraNavegacionColoresCrystal.Image7.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Colores_Crystal.Container2.TextInput1_5.AccessibleLabel",
+                  "fullyQualifiedName": "Colores_Crystal.Container_barraNavegacionColoresCrystal.Image7.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Colores_Crystal",
-                "type": "Colores_Crystal.Container2.TextInput1_5"
+                "type": "Colores_Crystal.Container_barraNavegacionColoresCrystal.Image7"
               }
             }
           ],
@@ -1095,19 +1095,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Colores_Crystal.Container2.Icon1_2.AccessibleLabel"
+                  "fullyQualifiedName": "Colores_Crystal.containerBaseCrystal.Container2_2.Icon12_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Colores_Crystal.Container2.Icon1_2.AccessibleLabel",
+                  "fullyQualifiedName": "Colores_Crystal.containerBaseCrystal.Container2_2.Icon12_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Colores_Crystal",
-                "type": "Colores_Crystal.Container2.Icon1_2"
+                "type": "Colores_Crystal.containerBaseCrystal.Container2_2.Icon12_1"
               }
             }
           ],
@@ -1125,19 +1125,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Colores_Crystal.Container2.Icon1_2.TabIndex"
+                  "fullyQualifiedName": "Colores_Crystal.containerBaseCrystal.Container2_2.TextInput1_7.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Colores_Crystal.Container2.Icon1_2.TabIndex",
+                  "fullyQualifiedName": "Colores_Crystal.containerBaseCrystal.Container2_2.TextInput1_7.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "TabIndex",
+                "member": "AccessibleLabel",
                 "module": "Colores_Crystal",
-                "type": "Colores_Crystal.Container2.Icon1_2"
+                "type": "Colores_Crystal.containerBaseCrystal.Container2_2.TextInput1_7"
               }
             }
           ],
@@ -1147,8 +1147,8 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 4
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -9075,36 +9075,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Pantalla_Pantone.Container_barraNavegacionPantone.Image6.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Pantalla_Pantone.Container_barraNavegacionPantone.Image6.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Pantalla_Pantone",
-                "type": "Pantalla_Pantone.Container_barraNavegacionPantone.Image6"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Pantalla_Pantone.Container_barraNavegacionPantone.Image6.TabIndex"
                 }
               ],
@@ -9135,19 +9105,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Pantalla_Pantone.Container_barraNavegacionPantone.Image12.AccessibleLabel"
+                  "fullyQualifiedName": "Pantalla_Pantone.Container_barraNavegacionPantone.Image6.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Pantalla_Pantone.Container_barraNavegacionPantone.Image12.AccessibleLabel",
+                  "fullyQualifiedName": "Pantalla_Pantone.Container_barraNavegacionPantone.Image6.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Pantalla_Pantone",
-                "type": "Pantalla_Pantone.Container_barraNavegacionPantone.Image12"
+                "type": "Pantalla_Pantone.Container_barraNavegacionPantone.Image6"
               }
             }
           ],
@@ -9189,6 +9159,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Pantalla_Pantone.Container_barraNavegacionPantone.Image12.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Pantalla_Pantone.Container_barraNavegacionPantone.Image12.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Pantalla_Pantone",
+                "type": "Pantalla_Pantone.Container_barraNavegacionPantone.Image12"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -9328,6 +9328,126 @@
                 "member": "TabIndex",
                 "module": "Pantalla_Pantone",
                 "type": "Pantalla_Pantone.ContenedorBase.Container2_1.Icon12"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Colores_Crystal.Container_barraNavegacionColoresCrystal.Image14.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Colores_Crystal.Container_barraNavegacionColoresCrystal.Image14.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Colores_Crystal",
+                "type": "Colores_Crystal.Container_barraNavegacionColoresCrystal.Image14"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Colores_Crystal.containerBaseCrystal.Container2_2.Icon12_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Colores_Crystal.containerBaseCrystal.Container2_2.Icon12_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Colores_Crystal",
+                "type": "Colores_Crystal.containerBaseCrystal.Container2_2.Icon12_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Colores_Crystal.containerBaseCrystal.Container2_2.Icon1_4.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Colores_Crystal.containerBaseCrystal.Container2_2.Icon1_4.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Colores_Crystal",
+                "type": "Colores_Crystal.containerBaseCrystal.Container2_2.Icon1_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Colores_Crystal.containerBaseCrystal.Container2_2.Icon1_4.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Colores_Crystal.containerBaseCrystal.Container2_2.Icon1_4.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Colores_Crystal",
+                "type": "Colores_Crystal.containerBaseCrystal.Container2_2.Icon1_4"
               }
             }
           ],
@@ -9579,6 +9699,36 @@
           },
           "ruleId": "app-UnusedVariables",
           "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.cuota"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.cuota",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "cuota",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedMediaResources",
+          "ruleIndex": 7
         },
         {
           "locations": [
