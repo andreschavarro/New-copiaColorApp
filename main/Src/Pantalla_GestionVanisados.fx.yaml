@@ -271,6 +271,24 @@ Pantalla_GestionVanisados As screen:
                 Y: =84
                 ZIndex: =12
 
+        Image8 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =422
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: ='MicrosoftTeams-image (1)_1'
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =702
+            X: =480
+            Y: =268
+            ZIndex: =3
+
     Container_barraNavegacionvanisados As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
         Height: =59
@@ -501,7 +519,8 @@ Pantalla_GestionVanisados As screen:
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
-        Visible: =ContainerGestionVanisados
+        Visible: |
+            =ContainerGestionVanisados
         Width: =1600
         Y: =260
         ZIndex: =3
