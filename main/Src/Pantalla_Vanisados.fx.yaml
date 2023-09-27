@@ -1157,7 +1157,7 @@ Pantalla_Vanisados As screen:
                 HoverColor: =RGBA(184, 149, 9, 1)
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Icon: =Icon.Lightbulb
-                OnSelect: |
+                OnSelect: |+
                     =Set(
                         VarCodCrystal,
                         ThisItem.coColor
@@ -1178,6 +1178,8 @@ Pantalla_Vanisados As screen:
                         contenedorVisible,
                         true
                     );
+                    Set(varCodigoSap, LookUp(colorCalceteriaDev, coColor = ThisItem.coColor).coMaterial)
+                    
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
@@ -5648,9 +5650,10 @@ Pantalla_Vanisados As screen:
                         {
                            Color_Crystal:Label3_11.Text,
                            Materia_Prima:If(IsBlank(Label3_9.Text),Dropdown1_1.Selected.Value,Label3_9.Text),
-                           Tipo_vanisado:Label3_8.Text,
-                           Vanisado_Actual:Label3_7.Text,
-                           vanisado_recomendado:TextInput2.Text,
+                           Tipo_vanisado: Label3_8.Text,
+                           Vanisado_Actual: Label3_7.Text,
+                           vanisado_recomendado: TextInput2.Text,
+                           Codigo_SAP: varCodigoSap,
                            Estado:"pendiente"
                             
                         }
@@ -5785,6 +5788,21 @@ Pantalla_Vanisados As screen:
                 X: =514
                 Y: =104
                 ZIndex: =16
+
+            Label10 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Size: =13
+                Text: =varCodigoSap
+                X: =454
+                Y: =189
+                ZIndex: =17
 
         Container2_3 As groupContainer.manualLayoutContainer:
             BorderColor: =RGBA(54, 176, 75, 1)
