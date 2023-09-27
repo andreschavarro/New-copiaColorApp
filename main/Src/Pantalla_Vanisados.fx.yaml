@@ -5440,7 +5440,7 @@ Pantalla_Vanisados As screen:
                 Size: =13
                 Text: ="Tipo vanisado"
                 X: =8
-                Y: =189
+                Y: =181
                 ZIndex: =1
 
             Label3_1 As label:
@@ -5456,7 +5456,7 @@ Pantalla_Vanisados As screen:
                 Size: =13
                 Text: ="Vanisado actual"
                 X: =8
-                Y: =254
+                Y: =246
                 ZIndex: =2
 
             Label3_6 As label:
@@ -5472,7 +5472,7 @@ Pantalla_Vanisados As screen:
                 Size: =13
                 Text: ="Materia prima"
                 X: =8
-                Y: =124
+                Y: =116
                 ZIndex: =3
 
             Label3_7 As label:
@@ -5488,7 +5488,7 @@ Pantalla_Vanisados As screen:
                 Text: =Varvanizadoactual
                 Width: =180
                 X: =196
-                Y: =254
+                Y: =246
                 ZIndex: =4
 
             Label3_8 As label:
@@ -5504,7 +5504,7 @@ Pantalla_Vanisados As screen:
                 Text: =VarTipovanizado
                 Width: =180
                 X: =196
-                Y: =189
+                Y: =181
                 ZIndex: =5
 
             Label3_9 As label:
@@ -5521,8 +5521,7 @@ Pantalla_Vanisados As screen:
                 Size: =13
                 Text: =VarMateriaP
                 Visible: |
-                    =
-                    If(!IsBlank(VarMateriaP),true,false)
+                    =If(!IsBlank(VarMateriaP),true,false) And !sugMaterial
                 Width: =180
                 X: =196
                 Y: =124
@@ -5599,7 +5598,7 @@ Pantalla_Vanisados As screen:
                     =true
                 Width: =180
                 X: =196
-                Y: =309
+                Y: =301
                 ZIndex: =9
 
             Label3_12 As label:
@@ -5615,7 +5614,7 @@ Pantalla_Vanisados As screen:
                 Size: =13
                 Text: ="Recomendado"
                 X: =8
-                Y: =310
+                Y: =302
                 ZIndex: =10
 
             Label3_13 As label:
@@ -5688,11 +5687,22 @@ Pantalla_Vanisados As screen:
                         Defaults(SugerenciaVanisados),
                         {
                            Color_Crystal:Label3_11.Text,
-                           Materia_Prima:If(IsBlank(Label3_9.Text),Dropdown1_1.Selected.Value,Label3_9.Text),
+                           Materia_Prima: If(
+                                                !IsBlank(Dropdown1_2.Selected.Value),  // si Dropdown1_2 esta en blanco o no tiene un valor seleccionado no 
+                                                //me guarde su valor  si tiene un valor selecionado entoces 
+                                                Dropdown1_2.Selected.Value,  // guardeme su valor selecionado del Dropdown1_2 
+                                                //si no cumple la primera condicion entre ala seguda condicion de si
+                                                If(
+                                                    !IsBlank(Label3_9.Text),  //  verifique  si Label3_9.Text  está en blanco si no
+                                                    Label3_9.Text,  // esta en blanco guardar su valor Label3_9.Text si esta en blanco 
+                                                    Dropdown1_1.Selected.Value  // guarda  el valor del Dropdown1_1 
+                                                )
+                                            ),
+                    
                            Tipo_vanisado: Label3_8.Text,
                            Vanisado_Actual: Label3_7.Text,
                            vanisado_recomendado: TextInput2.Text,
-                           Codigo_SAP: varCodigoSap,
+                           Codigo_SAP: Label10.Text,
                            Estado:"pendiente"
                             
                         }
@@ -5824,11 +5834,28 @@ Pantalla_Vanisados As screen:
                 Size: =13
                 Visible: =sugMaterial
                 Width: =180
-                X: =514
-                Y: =104
+                X: =196
+                Y: =116
                 ZIndex: =16
 
             Label10 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(255, 255, 255, 1)
+                BorderThickness: =1
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Size: =13
+                Text: =varCodigoSap
+                Width: =180
+                X: =196
+                Y: =360
+                ZIndex: =17
+
+            Label8 As label:
+                Align: =Align.Center
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -5838,10 +5865,10 @@ Pantalla_Vanisados As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 Size: =13
-                Text: =varCodigoSap
-                X: =454
-                Y: =189
-                ZIndex: =17
+                Text: ="Codigo SAP"
+                X: =8
+                Y: =360
+                ZIndex: =18
 
         Container2_3 As groupContainer.manualLayoutContainer:
             BorderColor: =RGBA(153, 153, 153, 1)
