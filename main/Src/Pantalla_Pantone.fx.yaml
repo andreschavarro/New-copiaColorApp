@@ -421,6 +421,7 @@ Pantalla_Pantone As screen:
             HoverFill: =RGBA(0, 0, 0, 1)
             OnSelect: |
                 =Set(selectedMat,Dropdown1.Selected.Value);
+                Set(gitcarga,true);
                 If(
                     !IsBlank(selectedColorCode) && !IsBlank(tipoColorFlujo),
                     ClearCollect(
@@ -436,6 +437,7 @@ Pantalla_Pantone As screen:
                         )
                     )
                 );
+                Set(gitcarga,false);
                 Collect(
                     DatosUsoColorApp,
                     {User:Text(User().FullName),
@@ -1507,6 +1509,24 @@ Pantalla_Pantone As screen:
                     X: =36
                     Y: =95
                     ZIndex: =22
+
+        Image16 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: =VAyR
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =gitcarga
+            Width: =114
+            X: =734
+            Y: =247
+            ZIndex: =2
 
     Container_Botton As groupContainer.manualLayoutContainer:
         Height: =62
