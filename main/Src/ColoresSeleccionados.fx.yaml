@@ -352,33 +352,50 @@ ColoresSeleccionados As screen:
             HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Download
-            OnSelect: |-
-                =Office365Outlook.SendEmailV2(
-                    User().Email,
-                    "PDF ColorApp",
-                    "Encuentre adjunto su PDF generado mediante colorApp",
+            OnSelect: |+
+                =/*Office365Outlook.SendEmailV2(
+                    User().Email;
+                    "PDF ColorApp";
+                    "Encuentre adjunto su PDF generado mediante colorApp";
                     {
                         Attachments: Table(
                             {
-                                Name: "Busqueda ColorApp.pdf",
+                                Name: "Busqueda ColorApp.pdf";
                                 ContentBytes: PDF(
-                                    ContainerColorSeleccion,
+                                    ContainerColorSeleccion;
                                     {ExpandContainers: true}
                                 )
                             }
                         )
                     }
-                );
-                Clear(Colorrgb);
-                Clear(gall);
-                Navigate(Pantalla_Pantone);
-                Reset(ComboBox1);
-                Reset(Dropdown1);
+                );;
+                Clear(Colorrgb);;
+                Clear(gall);;
+                Navigate(Pantalla_Pantone);;
+                Reset(ComboBox1);;
+                Reset(Dropdown1);;
                 Notify(
-                    "El archivo pdf se envió correctamente a su correo",
-                    NotificationType.Success,
+                    "El archivo pdf se envió correctamente a su correo";
+                    NotificationType.Success;
                     2000
-                )
+                )*/
+                Set(
+                    JSONPDF,
+                    JSON(Colorrgb)
+                );
+                COAPP_PRD_PDF_2.Run(JSONPDF)
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)

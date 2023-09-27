@@ -117,7 +117,8 @@ Pantalla_Pantone As screen:
             Size: =18
             Text: =User().FullName
             Width: =387
-            X: =1073
+            X: =1060
+            Y: =4
             ZIndex: =5
 
         Button11_8 As button:
@@ -1198,8 +1199,8 @@ Pantalla_Pantone As screen:
                         =Collect(
                             Colorrgb,
                             {
-                                Descripcion: ThisItem.Value.descMaterial,
-                                rgb: ThisItem.Value.rgb,
+                                Descripcion: Text(ThisItem.Value.descMaterial),
+                                rgb: Text(ThisItem.Value.rgb),
                                 color: RGBA(
                                     Index(
                                         Split(
@@ -1248,11 +1249,11 @@ Pantalla_Pantone As screen:
                                     ).Value,
                                     1
                                 ),
-                                codigomaterial: ThisItem.Value.coMaterial,
-                                nombrecolor: ThisItem.Value.colorName,
-                                pantone: ThisItem.Value.pantone,
-                                colorcrystal: ThisItem.Value.coColor,
-                                alternativa: ThisItem.Value.index
+                                codigomaterial: Text(ThisItem.Value.coMaterial),
+                                nombrecolor: Text(ThisItem.Value.colorName),
+                                pantone: Text(ThisItem.Value.pantone),
+                                colorcrystal: Text(ThisItem.Value.coColor),
+                                alternativa: Text(ThisItem.Value.index)
                             }
                         )
                     OnSelect: =
@@ -1260,8 +1261,8 @@ Pantalla_Pantone As screen:
                         =Remove(
                             Colorrgb,
                             {
-                                Descripcion: ThisItem.Value.descMaterial,
-                                rgb: ThisItem.Value.rgb,
+                                Descripcion: Text(ThisItem.Value.descMaterial),
+                                rgb: Text(ThisItem.Value.rgb),
                                 color: RGBA(
                                     Index(
                                         Split(
@@ -1310,11 +1311,11 @@ Pantalla_Pantone As screen:
                                     ).Value,
                                     1
                                 ),
-                                codigomaterial: ThisItem.Value.coMaterial,
-                                nombrecolor: ThisItem.Value.colorName,
-                                pantone: ThisItem.Value.pantone,
-                                colorcrystal: ThisItem.Value.coColor,
-                                alternativa: ThisItem.Value.index
+                                codigomaterial: Text(ThisItem.Value.coMaterial),
+                                nombrecolor: Text(ThisItem.Value.colorName),
+                                pantone: Text(ThisItem.Value.pantone),
+                                colorcrystal: Text(ThisItem.Value.coColor),
+                                alternativa: Text(ThisItem.Value.index)
                             }
                         )
                     PressedBorderColor: =RGBA(0, 0, 0, 0)

@@ -811,7 +811,7 @@ Pantalla_Vanisados As screen:
                 HoverColor: =RGBA(184, 149, 9, 1)
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Icon: =Icon.Lightbulb
-                OnSelect: |+
+                OnSelect: |-
                     =Set(
                         contenedorVisible,
                         true
@@ -841,12 +841,13 @@ Pantalla_Vanisados As screen:
                         VarOcultar,
                         false
                     );
-                    
-                    
-                    
-                    
-                    
-                    
+                    Set(
+                        varCodigoSap,
+                        LookUp(
+                            colorCalceteriaDev,
+                            coColor = ThisItem.coColor
+                        ).coMaterial
+                    )
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
@@ -1474,12 +1475,28 @@ Pantalla_Vanisados As screen:
                 HoverColor: =RGBA(184, 149, 9, 1)
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Icon: =Icon.Lightbulb
-                OnSelect: |
-                    =Set(VarCodCrystal,ThisItem.coColor);
-                    Set(VarMateriaP,ThisItem.materiaPrima);
-                    Set(VarTipovanizado,"Elastico expuesto");
-                    Set(Varvanizadoactual,ThisItem.elastico);
-                    Set(contenedorVisible,true)
+                OnSelect: |-
+                    =Set(
+                        VarCodCrystal,
+                        ThisItem.coColor
+                    );
+                    Set(
+                        VarMateriaP,
+                        ThisItem.materiaPrima
+                    );
+                    Set(
+                        VarTipovanizado,
+                        "Elastico expuesto"
+                    );
+                    Set(
+                        Varvanizadoactual,
+                        ThisItem.elastico
+                    );
+                    Set(
+                        contenedorVisible,
+                        true
+                    );
+                    Set(varCodigoSap, LookUp(colorCalceteriaDev, coColor = ThisItem.coColor).coMaterial)
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
@@ -1776,12 +1793,34 @@ Pantalla_Vanisados As screen:
                 HoverColor: =RGBA(184, 149, 9, 1)
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Icon: =Icon.Lightbulb
-                OnSelect: |
-                    =Set(VarCodCrystal,ThisItem.coColor);
-                    Set(VarMateriaP,ThisItem.materiaPrima);
-                    Set(VarTipovanizado,"lycra");
-                    Set(Varvanizadoactual,ThisItem.lycra);
-                    Set(contenedorVisible,true)
+                OnSelect: |-
+                    =Set(
+                        VarCodCrystal,
+                        ThisItem.coColor
+                    );
+                    Set(
+                        VarMateriaP,
+                        ThisItem.materiaPrima
+                    );
+                    Set(
+                        VarTipovanizado,
+                        "lycra"
+                    );
+                    Set(
+                        Varvanizadoactual,
+                        ThisItem.lycra
+                    );
+                    Set(
+                        contenedorVisible,
+                        true
+                    );
+                    Set(
+                        varCodigoSap,
+                        LookUp(
+                            colorCalceteriaDev,
+                            coColor = ThisItem.coColor
+                        ).coMaterial
+                    )
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
@@ -5880,19 +5919,4 @@ Pantalla_Vanisados As screen:
                 Width: =40
                 X: =630
                 ZIndex: =4
-
-    Label8 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Size: =13
-        Text: =color_var
-        X: =879
-        Y: =119
-        ZIndex: =8
 
