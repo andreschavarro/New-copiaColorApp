@@ -1046,7 +1046,7 @@ Colores_Crystal As screen:
                 ZIndex: =13
 
         Container2_2 As groupContainer.manualLayoutContainer:
-            BorderColor: =RGBA(54, 176, 75, 1)
+            BorderColor: =RGBA(153, 153, 153, 1)
             BorderThickness: =1
             DropShadow: =DropShadow.Bold
             Height: =187
@@ -1062,7 +1062,8 @@ Colores_Crystal As screen:
 
             TextInput1_7 As text:
                 Align: =Align.Center
-                BorderColor: =RGBA(255, 255, 0, 1)
+                BorderColor: =RGBA(153, 153, 153, 1)
+                BorderStyle: =BorderStyle.None
                 Color: =RGBA(0, 0, 0, 1)
                 Default: =""
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -1071,9 +1072,10 @@ Colores_Crystal As screen:
                 FocusedBorderThickness: =4
                 Height: =187
                 HintText: ="Ingrese su Comentario"
-                HoverBorderColor: =RGBA(0, 18, 107, 1)
+                HoverBorderColor: =RGBA(255, 255, 255, 1)
                 HoverColor: =RGBA(0, 0, 0, 1)
-                HoverFill: =RGBA(209, 232, 178, 1)
+                HoverFill: =RGBA(245, 245, 245, 1)
+                PressedFill: =RGBA(230, 230, 230, 1)
                 RadiusBottomLeft: =1
                 RadiusBottomRight: =1
                 RadiusTopLeft: =1
@@ -1110,7 +1112,7 @@ Colores_Crystal As screen:
                 FocusedBorderThickness: =4
                 Height: =35
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverColor: =RGBA(0, 0, 0, 0.74)
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Icon: =Icon.CancelBadge
                 OnSelect: |

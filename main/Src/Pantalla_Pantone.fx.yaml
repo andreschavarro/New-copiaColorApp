@@ -421,6 +421,7 @@ Pantalla_Pantone As screen:
             HoverFill: =RGBA(0, 0, 0, 1)
             OnSelect: |
                 =Set(selectedMat,Dropdown1.Selected.Value);
+                Set(gitcarga,true);
                 If(
                     !IsBlank(selectedColorCode) && !IsBlank(tipoColorFlujo),
                     ClearCollect(
@@ -436,6 +437,7 @@ Pantalla_Pantone As screen:
                         )
                     )
                 );
+                Set(gitcarga,false);
                 Collect(
                     DatosUsoColorApp,
                     {User:Text(User().FullName),
@@ -1508,6 +1510,24 @@ Pantalla_Pantone As screen:
                     Y: =95
                     ZIndex: =22
 
+        Image16 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: =VAyR
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =gitcarga
+            Width: =114
+            X: =734
+            Y: =247
+            ZIndex: =2
+
     Container_Botton As groupContainer.manualLayoutContainer:
         Height: =62
         RadiusBottomLeft: =4
@@ -1941,7 +1961,7 @@ Pantalla_Pantone As screen:
                 ZIndex: =25
 
         Container2_1 As groupContainer.manualLayoutContainer:
-            BorderColor: =RGBA(54, 176, 75, 1)
+            BorderColor: =RGBA(153, 153, 153, 1)
             BorderThickness: =1
             DropShadow: =DropShadow.Bold
             Height: =187
@@ -1957,7 +1977,8 @@ Pantalla_Pantone As screen:
 
             TextInput1_6 As text:
                 Align: =Align.Center
-                BorderColor: =RGBA(255, 255, 0, 1)
+                BorderColor: =RGBA(255, 255, 255, 1)
+                BorderStyle: =BorderStyle.None
                 Color: =RGBA(0, 0, 0, 1)
                 Default: =""
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -1966,9 +1987,9 @@ Pantalla_Pantone As screen:
                 FocusedBorderThickness: =4
                 Height: =187
                 HintText: ="Ingrese su Comentario"
-                HoverBorderColor: =RGBA(0, 18, 107, 1)
+                HoverBorderColor: =RGBA(255, 255, 255, 1)
                 HoverColor: =RGBA(0, 0, 0, 1)
-                HoverFill: =RGBA(209, 232, 178, 1)
+                HoverFill: =RGBA(240, 240, 240, 0.18)
                 RadiusBottomLeft: =1
                 RadiusBottomRight: =1
                 RadiusTopLeft: =1
@@ -1997,6 +2018,7 @@ Pantalla_Pantone As screen:
                 ZIndex: =3
 
             Icon12 As icon.CancelBadge:
+                AutoDisableOnSelect: =false
                 BorderColor: =RGBA(166, 166, 166, 1)
                 Color: =RGBA(128, 128, 128, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -2005,7 +2027,7 @@ Pantalla_Pantone As screen:
                 FocusedBorderThickness: =4
                 Height: =35
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverColor: =RGBA(0, 0, 0, 0.73)
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Icon: =Icon.CancelBadge
                 OnSelect: |

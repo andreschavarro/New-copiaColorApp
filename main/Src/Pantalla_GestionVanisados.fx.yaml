@@ -523,12 +523,35 @@ Pantalla_GestionVanisados As screen:
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverFill: =RGBA(0, 0, 0, 0)
             Image: =charla
+            OnSelect: |-
+                =UpdateContext({VarComentario:!VarComentario})
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
             Width: =80
             X: =1460
             Y: =10
             ZIndex: =13
+
+        Image15 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =40
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: ='charla (1)'
+            OnSelect: |-
+                =UpdateContext({VarComentario: !VarComentario})
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =VarComentario
+            Width: =80
+            X: =1460
+            Y: =10
+            ZIndex: =14
 
     Container_GestionVanizados As groupContainer.manualLayoutContainer:
         Fill: =RGBA(255, 255, 255, 1)
@@ -2180,4 +2203,93 @@ Pantalla_GestionVanisados As screen:
                     Text: =ThisItem.Codigo_SAP
                     Y: =97
                     ZIndex: =15
+
+    ContainerComentarios As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Fill: =RGBA(237, 237, 237, 0.79)
+        Height: =900
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Visible: =VarComentario
+        Width: =1600
+        ZIndex: =7
+
+        Container2_5 As groupContainer.manualLayoutContainer:
+            BorderColor: =RGBA(153, 153, 153, 1)
+            BorderThickness: =1
+            DropShadow: =DropShadow.Bold
+            Height: =187
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Width: =675
+            X: =470
+            Y: =360
+            ZIndex: =1
+
+            TextInput1_10 As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(255, 255, 255, 1)
+                BorderStyle: =BorderStyle.None
+                Color: =RGBA(0, 0, 0, 1)
+                Default: =""
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                FocusedBorderThickness: =4
+                Height: =187
+                HintText: ="Ingrese su Comentario"
+                HoverBorderColor: =RGBA(0, 18, 107, 1)
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(242, 242, 242, 1)
+                RadiusBottomLeft: =1
+                RadiusBottomRight: =1
+                RadiusTopLeft: =1
+                RadiusTopRight: =1
+                Size: =13
+                Width: =675
+                ZIndex: =2
+
+            Icon1_7 As icon.Send:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(128, 128, 128, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Height: =40
+                Icon: =Icon.Send
+                OnSelect: |-
+                    =Office365Outlook.SendEmailV2(
+                        "jesgomez@crystal.com.co",
+                        "Ponga mas cuidado manito",  
+                        TextInput1_10.Text  
+                    );
+                    UpdateContext({VarComentario: !VarComentario})
+                Width: =40
+                X: =630
+                Y: =147
+                ZIndex: =3
+
+            Icon12_4 As icon.CancelBadge:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(128, 128, 128, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =35
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =RGBA(0, 0, 0, 0.76)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.CancelBadge
+                OnSelect: |
+                    =UpdateContext({VarComentario: !VarComentario});
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =40
+                X: =630
+                ZIndex: =4
 
