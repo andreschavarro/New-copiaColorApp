@@ -261,6 +261,26 @@ ColoresSeleccionados As screen:
                         X: =16
                         ZIndex: =11
 
+                    Icon13 As icon.Trash:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        Color: =RGBA(166, 166, 166, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(220, 220, 220, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =40
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.Trash
+                        OnSelect: =Remove(Colorrgb,ThisItem)
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Width: =40
+                        X: =993
+                        ZIndex: =12
+
         Rectangle11_2 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
@@ -383,10 +403,7 @@ ColoresSeleccionados As screen:
                     JSONPDF,
                     JSON(Colorrgb)
                 );
-                COAPP_PRD_PDF_2.Run(JSONPDF)
-                
-                
-                
+                COAPP_PRD_PDF_2.Run(JSONPDF);
                 
                 
                 

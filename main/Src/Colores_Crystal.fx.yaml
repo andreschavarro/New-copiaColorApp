@@ -426,7 +426,7 @@ Colores_Crystal As screen:
             HoverBorderColor: =RGBA(255, 255, 255, 1)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(212, 212, 212, 1)
-            Items: =Distinct(GestionVanisadosDEV , materiaPrima)
+            Items: =Distinct(GestionVanisadosDEV, materiaPrima)
             OnChange: =Set(var_mat,Text(Self.Selected.Value))
             PaddingBottom: =5
             PaddingLeft: =12

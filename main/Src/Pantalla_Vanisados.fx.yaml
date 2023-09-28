@@ -1179,11 +1179,12 @@ Pantalla_Vanisados As screen:
                         contenedorVisible,
                         true
                     );
-                    Set(varCodigoSap, LookUp(colorCalceteriaDev, coColor = ThisItem.coColor).coMaterial)
+                    Set(varCodigoSap, LookUp(, coColor = ThisItem.coColor).V782)
                     
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
+                Visible: =If(color_var = ThisItem.V442, false, true)
                 Width: =25
                 X: =279
                 Y: =133
@@ -5774,7 +5775,7 @@ Pantalla_Vanisados As screen:
                 DisabledColor: =RGBA(220, 220, 220, 1)
                 DisabledFill: =RGBA(0, 0, 0, 0)
                 FocusedBorderThickness: =4
-                Height: =55
+                Height: =35
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 HoverFill: =RGBA(0, 0, 0, 0)
@@ -5784,9 +5785,9 @@ Pantalla_Vanisados As screen:
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
-                Width: =55
-                X: =417
-                Y: =89
+                Width: =35
+                X: =387
+                Y: =129
                 ZIndex: =15
 
             Dropdown1_2 As dropdown:
