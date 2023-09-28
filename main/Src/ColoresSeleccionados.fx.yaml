@@ -404,7 +404,8 @@ ColoresSeleccionados As screen:
                     JSON(Colorrgb)
                 );
                 COAPP_PRD_PDF_2.Run(JSONPDF);
-                
+                Set(link ,COAPP_PRD_PDF_2.Run().link);
+                Launch(link)
                 
                 
                 
