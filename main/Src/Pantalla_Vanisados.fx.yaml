@@ -630,25 +630,27 @@ Pantalla_Vanisados As screen:
         BorderColor: =RGBA(204, 204, 204, 1)
         BorderThickness: =1
         DelayItemLoading: =true
-        Height: =571
-        Items: |-
+        Height: =591
+        Items: |+
             =Filter(
                 GestionVanisadosDEV,
                 coColor = color_var
             )
+            
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =Set(cuadroVisible,false)
-        TemplateSize: =204
+        TemplateSize: =190
         Visible: =varRegistros
-        Width: =1525
-        X: =40
-        Y: =297
+        Width: =1565
+        Y: =295
         ZIndex: =4
 
         "'contenedortarjetaVani.78/2' As groupContainer.manualLayoutContainer":
             BorderColor: =RGBA(204, 204, 204, 1)
             BorderThickness: =1
+            ContentLanguage: |
+                =
             DropShadow: =DropShadow.Regular
             Fill: =RGBA(230, 230, 230, 0.41)
             Height: =165
@@ -811,7 +813,7 @@ Pantalla_Vanisados As screen:
                 HoverColor: =RGBA(184, 149, 9, 1)
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Icon: =Icon.Lightbulb
-                OnSelect: |-
+                OnSelect: |+
                     =Set(
                         contenedorVisible,
                         true
@@ -845,9 +847,10 @@ Pantalla_Vanisados As screen:
                         varCodigoSap,
                         LookUp(
                             colorCalceteriaDev,
-                            coColor = ThisItem.coColor
+                            coColor = ThisItem.V782
                         ).coMaterial
-                    )
+                    );
+                    
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
@@ -986,6 +989,46 @@ Pantalla_Vanisados As screen:
                     PressedFill: =RGBA(0, 120, 212, 1)
                     Width: =90
                     ZIndex: =3
+
+            Label26 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =14
+                Size: =9.25
+                Text: ="Codigo SAP"
+                Width: =88
+                X: =130
+                Y: =117
+                ZIndex: =12
+
+            Label26_1 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Height: =14
+                Size: =9.25
+                Text: |-
+                    =LookUp(
+                            colorCalceteriaDev,
+                            coColor = ThisItem.V782
+                    ).coMaterial
+                Width: =103
+                X: =132
+                Y: =138
+                ZIndex: =13
 
         "'contenedortarjetaVani.44/2' As groupContainer.manualLayoutContainer":
             BorderColor: =RGBA(204, 204, 204, 1)
@@ -1179,7 +1222,7 @@ Pantalla_Vanisados As screen:
                         contenedorVisible,
                         true
                     );
-                    Set(varCodigoSap, LookUp(colorCalceteriaDev, coColor = ThisItem.coColor).coMaterial)
+                    Set(varCodigoSap, LookUp(colorCalceteriaDev, coColor = ThisItem.V442).coMaterial)
                     
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -1319,6 +1362,48 @@ Pantalla_Vanisados As screen:
                     X: =5
                     Y: =83
                     ZIndex: =3
+
+            Label27 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =14
+                LineHeight: =9.25
+                Size: =9.25
+                Text: ="Codigo SAP"
+                Width: =88
+                X: =124
+                Y: =118
+                ZIndex: =14
+
+            Label27_1 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Height: =14
+                LineHeight: =9.25
+                Size: =9.25
+                Text: |-
+                    =LookUp(
+                        colorCalceteriaDev,
+                        coColor = ThisItem.V442
+                    ).coMaterial
+                Width: =88
+                X: =130
+                Y: =137
+                ZIndex: =15
 
         contenedorTarjetaElastico As groupContainer.manualLayoutContainer:
             BorderColor: =RGBA(204, 204, 204, 1)
@@ -1496,7 +1581,7 @@ Pantalla_Vanisados As screen:
                         contenedorVisible,
                         true
                     );
-                    Set(varCodigoSap, LookUp(colorCalceteriaDev, coColor = ThisItem.coColor).coMaterial)
+                    Set(varCodigoSap, LookUp(colorCalceteriaDev, coColor = ThisItem.elastico).coMaterial)
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
@@ -1636,6 +1721,61 @@ Pantalla_Vanisados As screen:
                     X: =5
                     Y: =82
                     ZIndex: =3
+
+            Label28 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =14
+                Size: =9.25
+                Text: ="Codigo SAP"
+                Width: =88
+                X: =130
+                Y: =118
+                ZIndex: =13
+
+            Label28_1 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Height: =14
+                Size: =9.25
+                Text: =LookUp(colorCalceteriaDev, coColor = ThisItem.elastico).coMaterial
+                Width: =88
+                X: =130
+                Y: =140
+                ZIndex: =14
+
+            Label28_2 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =14
+                Size: =9.25
+                Text: =
+                Width: =88
+                X: =139
+                Y: =140
+                ZIndex: =15
 
         contenedorTarjetaLycra As groupContainer.manualLayoutContainer:
             BorderColor: =RGBA(230, 230, 230, 1)
@@ -1818,7 +1958,7 @@ Pantalla_Vanisados As screen:
                         varCodigoSap,
                         LookUp(
                             colorCalceteriaDev,
-                            coColor = ThisItem.coColor
+                            coColor = ThisItem.lycra
                         ).coMaterial
                     )
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
@@ -1961,6 +2101,41 @@ Pantalla_Vanisados As screen:
                     X: =5
                     Y: =82
                     ZIndex: =3
+
+            Label29 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =14
+                Size: =9.25
+                Text: ="Codigo SAP"
+                Width: =88
+                X: =130
+                Y: =118
+                ZIndex: =13
+
+            Label30 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Height: =14
+                Size: =9.25
+                Text: =LookUp(colorCalceteriaDev, coColor = ThisItem.lycra).coMaterial
+                Width: =88
+                X: =139
+                Y: =140
+                ZIndex: =14
 
         "'ConAlerta78/2' As groupContainer.manualLayoutContainer":
             BorderColor: =RGBA(230, 230, 230, 1)
@@ -5774,7 +5949,7 @@ Pantalla_Vanisados As screen:
                 DisabledColor: =RGBA(220, 220, 220, 1)
                 DisabledFill: =RGBA(0, 0, 0, 0)
                 FocusedBorderThickness: =4
-                Height: =55
+                Height: =40
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 HoverFill: =RGBA(0, 0, 0, 0)
@@ -5784,9 +5959,9 @@ Pantalla_Vanisados As screen:
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
-                Width: =55
-                X: =417
-                Y: =89
+                Width: =35
+                X: =392
+                Y: =124
                 ZIndex: =15
 
             Dropdown1_2 As dropdown:
