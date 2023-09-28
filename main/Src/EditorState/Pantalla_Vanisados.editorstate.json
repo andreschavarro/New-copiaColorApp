@@ -1922,7 +1922,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button3",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2644,7 +2644,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button3_2",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3005,7 +3005,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button3_3",
-      "ParentIndex": 5,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3366,7 +3366,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button3_4",
-      "ParentIndex": 4,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10765,7 +10765,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "CdigoCrystal_11",
-      "ParentIndex": 7,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12276,7 +12276,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "CdigoCrystal_4",
-      "ParentIndex": 7,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12652,7 +12652,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "CdigoCrystal_5",
-      "ParentIndex": 8,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13028,7 +13028,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "CdigoCrystal_6",
-      "ParentIndex": 8,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -17992,7 +17992,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ContainerDaToscolor_1",
-      "ParentIndex": 6,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -18215,7 +18215,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ContainerDatoscolor_2",
-      "ParentIndex": 7,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -18661,7 +18661,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ContainerDatoscolor_3",
-      "ParentIndex": 7,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -18877,7 +18877,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ContainerDatoscolor_4",
-      "ParentIndex": 6,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -22053,14 +22053,6 @@
           "InvariantPropertyName": "RadiusBottomRight",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "\"\"",
-          "InvariantPropertyName": "ContentLanguage",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
         }
       ],
       "HasDynamicProperties": false,
@@ -22076,11 +22068,6 @@
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
-        {
-          "Category": "Data",
-          "PropertyName": "ContentLanguage",
-          "RuleProviderType": "Unknown"
-        },
         {
           "Category": "Design",
           "PropertyName": "ZIndex",
@@ -29100,7 +29087,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon10",
-      "ParentIndex": 8,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -29327,7 +29314,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon10_1",
-      "ParentIndex": 9,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -31136,7 +31123,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon10_2",
-      "ParentIndex": 9,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -31358,7 +31345,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon10_3",
-      "ParentIndex": 8,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -33015,14 +33002,7 @@
         "HoverFill",
         "DisplayMode",
         "X",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Y",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Y",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -45555,7 +45535,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label5",
-      "ParentIndex": 4,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -45872,7 +45852,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label5_1",
-      "ParentIndex": 4,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -46499,7 +46479,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label5_3",
-      "ParentIndex": 4,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -46802,7 +46782,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label5_4",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -53091,7 +53071,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle15",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -53713,7 +53693,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle16",
-      "ParentIndex": 5,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -55689,7 +55669,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle86",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -56099,7 +56079,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle86_2",
-      "ParentIndex": 3,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -56509,7 +56489,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle86_4",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -56926,7 +56906,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle87",
-      "ParentIndex": 6,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -57350,7 +57330,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle87_2",
-      "ParentIndex": 6,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -57781,7 +57761,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle87_4",
-      "ParentIndex": 5,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -60451,7 +60431,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Vector11",
-      "ParentIndex": 5,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

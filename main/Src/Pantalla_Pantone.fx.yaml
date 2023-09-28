@@ -1251,9 +1251,10 @@ Pantalla_Pantone As screen:
                                 ),
                                 codigomaterial: Text(ThisItem.Value.coMaterial),
                                 nombrecolor: Text(ThisItem.Value.colorName),
-                                pantone: Text(ThisItem.Value.pantone),
+                                pantone: selectedPantone,
                                 colorcrystal: Text(ThisItem.Value.coColor),
-                                alternativa: Text(ThisItem.Value.index)
+                                alternativa: Text(ThisItem.Value.index),
+                                colorBuscado: selectedRGB
                             }
                         )
                     OnSelect: =
@@ -1313,9 +1314,10 @@ Pantalla_Pantone As screen:
                                 ),
                                 codigomaterial: Text(ThisItem.Value.coMaterial),
                                 nombrecolor: Text(ThisItem.Value.colorName),
-                                pantone: Text(ThisItem.Value.pantone),
+                                pantone: selectedPantone,
                                 colorcrystal: Text(ThisItem.Value.coColor),
-                                alternativa: Text(ThisItem.Value.index)
+                                alternativa: Text(ThisItem.Value.index),
+                                colorBuscado: selectedRGB
                             }
                         )
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
@@ -2038,5 +2040,6 @@ Pantalla_Pantone As screen:
                 PressedFill: =RGBA(0, 0, 0, 0)
                 Width: =40
                 X: =630
+                Y: =10
                 ZIndex: =4
 
