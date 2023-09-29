@@ -403,8 +403,8 @@ ColoresSeleccionados As screen:
                     JSONPDF,
                     JSON(Colorrgb)
                 );
-                COAPP_PRD_PDF_2.Run(JSONPDF);
-                Set(link ,COAPP_PRD_PDF_2.Run().link);
+                
+                Set(link ,COAPP_PRD_PDF_2.Run(JSONPDF).link);
                 Launch(link)
                 
                 

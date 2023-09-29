@@ -6,6 +6,11 @@
       <object name="ManualTriggerInput">
         <property name="Redactar_Entradas" type="string" />
       </object>
+      <string name="ResponseActionOutput_link_def" />
+      <object name="ResponseActionOutput">
+        <property name="link" type="string" />
+      </object>
+      <object name="Run_responses_default_def" />
     </jsonTypes>
   </grammars>
   <resources siena:authenticationProviderHref="#PowerAppAuth" base="https://msmanaged-na.azure-apim.net/apim/logicflows">
@@ -21,6 +26,9 @@
             <param style="plain" name="Redactar_Entradas" path="/Redactar_Entradas" type="xs:string" required="true" />
           </representation>
         </request>
+        <response>
+          <representation mediaType="application/json" element="service:ResponseActionOutput" />
+        </response>
       </method>
     </resource>
   </resources>
