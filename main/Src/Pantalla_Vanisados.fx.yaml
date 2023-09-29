@@ -3,13 +3,7 @@ Pantalla_Vanisados As screen:
     ImagePosition: =ImagePosition.Center
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |-
-        =Collect(
-            DatosUsoColorApp,
-            {User:Text(User().FullName),
-            TipoRegistro:"Open_PantallaVanisados",
-            FechaHora:Now()}
-        );
-        ClearCollect(
+        =ClearCollect(
             coleccionAlternativa,
             {
                 materiaPrima: "",
@@ -376,7 +370,7 @@ Pantalla_Vanisados As screen:
                         Text(ComboBox2.SearchText)
                     )
                 )
-            OnChange: |-
+            OnChange: |
                 =Clear(gallVanisadoUnico);
                 Set(
                     color_var,
@@ -391,6 +385,17 @@ Pantalla_Vanisados As screen:
                         )
                     ).rgb
                 );
+                
+                    
+                Collect(
+                        DatosUsoColorApp,
+                            {
+                                User: Text(User().FullName),
+                                TipoRegistro: " Busqueda ColorCrystalvanizados: "& Self.Selected.coColor,
+                                FechaHora: Now()
+                            }
+                        
+                )   
             OnSelect: |-
                 =Set(
                     color_var,
@@ -728,7 +733,7 @@ Pantalla_Vanisados As screen:
                 HoverBorderColor: =RGBA(255, 255, 255, 1)
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(0, 0, 0, 0)
-                OnSelect: |-
+                OnSelect: |
                     =Clear(gallVanisadoUnico);
                     Set(
                         cuadroVisible,
@@ -746,8 +751,14 @@ Pantalla_Vanisados As screen:
                         vanisadoFlujo,
                         "78"
                     );
-                    Set(bombillo,false);
-                    Set(gitcarga,true);
+                    Set(
+                        bombillo,
+                        false
+                    );
+                    Set(
+                        gitcarga,
+                        true
+                    );
                     ClearCollect(
                         gallVanisadoUnico,
                         Table(
@@ -760,13 +771,39 @@ Pantalla_Vanisados As screen:
                         )
                     );
                     //variables pop up
-                    Set(VarCodCrystal,ThisItem.coColor);
-                    Set(VarMateriaP,ThisItem.materiaPrima);
-                    Set(VarTipovanizado,"Vanizado 78/2");
-                    Set(Varvanizadoactual,ThisItem.V782);
+                    Set(
+                        VarCodCrystal,
+                        ThisItem.coColor
+                    );
+                    Set(
+                        VarMateriaP,
+                        ThisItem.materiaPrima
+                    );
+                    Set(
+                        VarTipovanizado,
+                        "Vanizado 78/2"
+                    );
+                    Set(
+                        Varvanizadoactual,
+                        ThisItem.V782
+                    );
                     //efecto garga
-                    Set(gitcarga,false);
-                    Set(bombillo,true)
+                    Set(
+                        gitcarga,
+                        false
+                    );
+                    Set(
+                        bombillo,
+                        true
+                    );
+                    Collect(
+                        DatosUsoColorApp,
+                        {
+                            User: Text(User().FullName),
+                            TipoRegistro: "BtnAlternativa_PantallaVanisados",
+                            FechaHora: Now()
+                        }
+                    );
                 PaddingBottom: =7
                 PressedBorderColor: =
                 PressedColor: =RGBA(255, 255, 255, 1)
@@ -1128,16 +1165,29 @@ Pantalla_Vanisados As screen:
                 HoverBorderColor: =RGBA(255, 255, 255, 1)
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(0, 0, 0, 0)
-                OnSelect: |-
+                OnSelect: |
                     =Clear(gallVanisadoUnico);
-                    Set(cuadroVisible,true);
-                    Set(mater,ThisItem.materiaPrima);
-                    Set(tipoVanisado,"Vanizado 44/2");
+                    Set(
+                        cuadroVisible,
+                        true
+                    );
+                    Set(
+                        mater,
+                        ThisItem.materiaPrima
+                    );
+                    Set(
+                        tipoVanisado,
+                        "Vanizado 44/2"
+                    );
                     Set(
                         vanisadoFlujo,
                         "44"
                     );
-                    Set(gitcarga,true);
+                    Set(
+                        gitcarga,
+                        true
+                    );
+                    Set(bombillo,false);
                     ClearCollect(
                         gallVanisadoUnico,
                         Table(
@@ -1150,11 +1200,35 @@ Pantalla_Vanisados As screen:
                         )
                     );
                     //varible para el pop up
-                    Set(VarCodCrystal,ThisItem.coColor);
-                    Set(VarMateriaP,ThisItem.materiaPrima);
-                    Set(VarTipovanizado,"Vanizados44/2");
-                    Set(Varvanizadoactual,ThisItem.V442);
-                    Set(gitcarga,false)
+                    Set(
+                        VarCodCrystal,
+                        ThisItem.coColor
+                    );
+                    Set(
+                        VarMateriaP,
+                        ThisItem.materiaPrima
+                    );
+                    Set(
+                        VarTipovanizado,
+                        "Vanizados44/2"
+                    );
+                    Set(
+                        Varvanizadoactual,
+                        ThisItem.V442
+                    );
+                    Set(
+                        gitcarga,
+                        false
+                    );
+                    Set(bombillo,true);
+                    Collect(
+                        DatosUsoColorApp,
+                        {
+                            User: Text(User().FullName),
+                            TipoRegistro: "BtnAlternativa_PantallaVanisados",
+                            FechaHora: Now()
+                        }
+                    );
                 PaddingBottom: =7
                 PressedBorderColor: =
                 PressedColor: =RGBA(255, 255, 255, 1)
@@ -1228,7 +1302,7 @@ Pantalla_Vanisados As screen:
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
-                Visible: =If(color_var = ThisItem.V442, false, true)
+                Visible: =If(color_var = ThisItem.V442, false, true) And bombillo
                 Width: =25
                 X: =279
                 Y: =133
@@ -1487,22 +1561,50 @@ Pantalla_Vanisados As screen:
                 HoverBorderColor: =RGBA(255, 255, 255, 1)
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(0, 0, 0, 0)
-                OnSelect: |+
+                OnSelect: |
                     =Clear(gallVanisadoUnico);
-                    Set(cuadroVisible,true);
+                    Set(
+                        cuadroVisible,
+                        true
+                    );
                     //variables para el pop up
-                    Set(VarCodCrystal,ThisItem.coColor);
-                    Set(VarMateriaP,ThisItem.materiaPrima);
-                    Set(VarTipovanizado,"Elastico expuesto");
-                    Set(Varvanizadoactual,ThisItem.elastico);
+                    Set(
+                        VarCodCrystal,
+                        ThisItem.coColor
+                    );
+                    Set(
+                        VarMateriaP,
+                        ThisItem.materiaPrima
+                    );
+                    Set(
+                        VarTipovanizado,
+                        "Elastico expuesto"
+                    );
+                    Set(
+                        Varvanizadoactual,
+                        ThisItem.elastico
+                    );
                     //flujo---
-                    Set(mater,ThisItem.materiaPrima);
-                    Set(tipoVanisado,"Elastico expuesto");
+                    Set(
+                        mater,
+                        ThisItem.materiaPrima
+                    );
+                    Set(
+                        tipoVanisado,
+                        "Elastico expuesto"
+                    );
                     Set(
                         vanisadoFlujo,
                         "elastico"
                     );
-                    Set(gitcarga,true);
+                    Set(
+                        gitcarga,
+                        true
+                    );
+                    Set(
+                        bombillo,
+                        false
+                    );
                     ClearCollect(
                         gallVanisadoUnico,
                         Table(
@@ -1514,8 +1616,22 @@ Pantalla_Vanisados As screen:
                             )
                         )
                     );
-                    Set(gitcarga,false);
-                    
+                    Set(
+                        gitcarga,
+                        false
+                    );
+                    Set(
+                        bombillo,
+                        true
+                    );
+                    Collect(
+                        DatosUsoColorApp,
+                        {
+                            User: Text(User().FullName),
+                            TipoRegistro: "BtnAlternativa_PantallaVanisados",
+                            FechaHora: Now()
+                        }
+                    );
                 PaddingBottom: =7
                 PressedBorderColor: =
                 PressedColor: =RGBA(255, 255, 255, 1)
@@ -1587,7 +1703,7 @@ Pantalla_Vanisados As screen:
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
-                Visible: =If(ThisItem.lycra = color_var,false,true)
+                Visible: =If(ThisItem.lycra = color_var,false,true) And bombillo
                 Width: =25
                 X: =279
                 Y: =133
@@ -1887,6 +2003,12 @@ Pantalla_Vanisados As screen:
                     Set(Varvanizadoactual,ThisItem.lycra);
                     //efecto carga
                     Set(gitcarga,false);
+                    Collect(
+                        DatosUsoColorApp,
+                        {User:Text(User().FullName),
+                        TipoRegistro:"BtnAlternativa_PantallaVanisados",
+                        FechaHora:Now()}
+                    );
                 PaddingBottom: =7
                 PressedBorderColor: =
                 PressedColor: =RGBA(255, 255, 255, 1)
@@ -5858,42 +5980,59 @@ Pantalla_Vanisados As screen:
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(0, 0, 0, 1)
-                OnSelect: |+
+                OnSelect: |
                     =Patch(
                         SugerenciaVanisados,
                         Defaults(SugerenciaVanisados),
                         {
-                           Color_Crystal:Label3_11.Text,
-                           Materia_Prima: If(
-                                                !IsBlank(Dropdown1_2.Selected.Value),  // si Dropdown1_2 esta en blanco o no tiene un valor seleccionado no 
-                                                //me guarde su valor  si tiene un valor selecionado entoces 
-                                                Dropdown1_2.Selected.Value,  // guardeme su valor selecionado del Dropdown1_2 
-                                                //si no cumple la primera condicion entre ala seguda condicion de si
-                                                If(
-                                                    !IsBlank(Label3_9.Text),  //  verifique  si Label3_9.Text  está en blanco si no
-                                                    Label3_9.Text,  // esta en blanco guardar su valor Label3_9.Text si esta en blanco 
-                                                    Dropdown1_1.Selected.Value  // guarda  el valor del Dropdown1_1 
-                                                )
-                                            ),
-                    
-                           Tipo_vanisado: Label3_8.Text,
-                           Vanisado_Actual: Label3_7.Text,
-                           vanisado_recomendado: TextInput2.Text,
-                           Codigo_SAP: Label10.Text,
-                           Estado:"pendiente"
-                            
+                            Color_Crystal: Label3_11.Text,
+                            Materia_Prima: If(
+                                !IsBlank(Dropdown1_2.Selected.Value),// si Dropdown1_2 esta en blanco o no tiene un valor seleccionado no 
+                    //me guarde su valor  si tiene un valor selecionado entoces 
+                                Dropdown1_2.Selected.Value,// guardeme su valor selecionado del Dropdown1_2 
+                    //si no cumple la primera condicion entre ala seguda condicion de si
+                                If(
+                                    !IsBlank(Label3_9.Text),//  verifique  si Label3_9.Text  está en blanco si no
+                                    Label3_9.Text,// esta en blanco guardar su valor Label3_9.Text si esta en blanco 
+                                    Dropdown1_1.Selected.Value// guarda  el valor del Dropdown1_1 
+                                )
+                            ),
+                            Tipo_vanisado: Label3_8.Text,
+                            Vanisado_Actual: Label3_7.Text,
+                            vanisado_recomendado: TextInput2.Text,
+                            Codigo_SAP: Label10.Text,
+                            Estado: "pendiente"
                         }
                     );
                     Reset(TextInput2);
-                    Set(varColorRecomendado, Blank());
-                    Notify("Se guardo con exito",NotificationType.Success);
-                    Set(contenedorVisible,false);
-                    Set(VarMateriaP, Blank());
-                    Set(Varvanizadoactual , Blank())
-                    
-                    
-                    
-                    
+                    Set(
+                        varColorRecomendado,
+                        Blank()
+                    );
+                    Notify(
+                        "Se guardo con exito",
+                        NotificationType.Success
+                    );
+                    Set(
+                        contenedorVisible,
+                        false
+                    );
+                    Set(
+                        VarMateriaP,
+                        Blank()
+                    );
+                    Set(
+                        Varvanizadoactual,
+                        Blank()
+                    );
+                    Collect(
+                        DatosUsoColorApp,
+                        {
+                            User: Text(User().FullName),
+                            TipoRegistro: "BtnSugerencia_Vanisado: "& VarTipovanizado,
+                            FechaHora: Now()
+                        }
+                    );
                 PressedBorderColor: =
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 0, 0, 1)
@@ -6012,7 +6151,7 @@ Pantalla_Vanisados As screen:
                 Visible: =sugMaterial
                 Width: =180
                 X: =196
-                Y: =116
+                Y: =126
                 ZIndex: =16
 
             Label10 As label:
@@ -6093,7 +6232,7 @@ Pantalla_Vanisados As screen:
                 Icon: =Icon.Send
                 OnSelect: |-
                     =Office365Outlook.SendEmailV2(
-                        "",
+                        "afancona@crystal.com.co",
                         "",  
                         TextInput1_8.Text  
                     );

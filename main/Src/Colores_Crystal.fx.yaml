@@ -365,7 +365,7 @@ Colores_Crystal As screen:
                 =Collect(
                     DatosUsoColorApp,
                     {User:Text(User().FullName),
-                    TipoRegistro:"color crystal: " & Self.Text,
+                    TipoRegistro:"Busqueda colorCrystal: " & Self.Text,
                     FechaHora:Now()}
                 )
             OnSelect: =
@@ -396,6 +396,13 @@ Colores_Crystal As screen:
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
+            OnChange: |-
+                =Collect(
+                    DatosUsoColorApp,
+                    {User:Text(User().FullName),
+                    TipoRegistro:"busqueda codigoSAP: "& Self.Text ,
+                    FechaHora:Now()}
+                )
             PressedBorderColor: =RGBA(0, 120, 212, 1)
             PressedColor: =RGBA(51, 51, 51, 1)
             PressedFill: =RGBA(255, 255, 255, 1)
@@ -436,8 +443,14 @@ Colores_Crystal As screen:
             Items: |-
                 =["Algodon","Nylon"]
                 //Distinct(GestionVanisadosDEV ; materiaPrima)
-            OnChange: |
+            OnChange: |-
                 =Set(var_mat,Text(Self.Selected.Value));
+                Collect(
+                    DatosUsoColorApp,
+                    {User:Text(User().FullName),
+                    TipoRegistro:"Busqueda materia prima: "& Self.Selected.Value,
+                    FechaHora:Now()}
+                )
             OnSelect: =
             PaddingBottom: =5
             PaddingLeft: =12
@@ -493,7 +506,11 @@ Colores_Crystal As screen:
             HoverBorderColor: =RGBA(255, 255, 255, 1)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(212, 212, 212, 1)
-            Items: =["Amarillo", "Azul", "Rojo", "Verde", "Morado", "Naranjado" , "Gris", "Rosado", "Negro", "Blanco", "Beige", "Cafe"]
+            Items: |
+                =["Amarillo", "Azul", "Rojo", "Verde", "Morado", "Naranjado" , "Gris", "Rosado", "Negro", "Blanco", "Beige", "Cafe"]
+                
+                    
+                    
             PaddingBottom: =5
             PaddingLeft: =12
             PaddingRight: =5
@@ -945,7 +962,7 @@ Colores_Crystal As screen:
                     Collect(
                         DatosUsoColorApp,
                         {User:Text(User().FullName),
-                        TipoRegistro:"Reporte_pantallcrystal",
+                        TipoRegistro:"Reporte_pantallacrystal" ,
                         FechaHora:Now()}
                     )
                 PressedBorderColor: =RGBA(204, 204, 204, 1)

@@ -442,7 +442,7 @@ Pantalla_Pantone As screen:
                 Collect(
                     DatosUsoColorApp,
                     {User:Text(User().FullName),
-                    TipoRegistro:"Ejecucion_flujoBusqueda",
+                    TipoRegistro:"Busqueda_pantone",
                     FechaHora:Now()}
                 )
             PressedBorderColor: =RGBA(255, 255, 255, 1)

@@ -595,6 +595,12 @@ Pantalla_RGB_ENEAS As screen:
                     "Códigos RGB cargados con éxito",
                     NotificationType.Success,
                     2000
+                );
+                Collect(
+                    DatosUsoColorApp,
+                    {User:Text(User().FullName),
+                    TipoRegistro:"Generar tabla Eneas",
+                    FechaHora:Now()}
                 )
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -692,6 +698,12 @@ Pantalla_RGB_ENEAS As screen:
                     NotificationType.Success,
                     3000
                 );
+                Collect(
+                    DatosUsoColorApp,
+                    {User:Text(User().FullName),
+                    TipoRegistro:"BtnCrear Excel Eneas ",
+                    FechaHora:Now()}
+                )
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
