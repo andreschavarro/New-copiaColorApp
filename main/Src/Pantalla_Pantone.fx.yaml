@@ -508,7 +508,8 @@ Pantalla_Pantone As screen:
             HoverBorderColor: =RGBA(153, 153, 153, 1)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(230, 230, 230, 0.67)
-            Items: =["Buscar elemento","Pantone","Color crystal","RGB"]
+            Items: |
+                =["Buscar elemento","Pantone","Color crystal","RGB"]
             OnChange: |+
                 =Set(
                     tipoColor,
@@ -1786,7 +1787,14 @@ Pantalla_Pantone As screen:
                     Notify("Reporte realizado",NotificationType.Success,3000);
                     
                     Set(selectedPantoneVar,"");
-                    UpdateContext({ ShowToolTiperror: !ShowToolTiperror })
+                    UpdateContext({ ShowToolTiperror: !ShowToolTiperror });
+                    //colecciòn para almacenar reporte de rgb en P.pantone
+                    Collect(
+                        DatosUsoColorApp,
+                        {User:Text(User().FullName),
+                        TipoRegistro:"Reportes_RGB_Pantone",
+                        FechaHora:Now()}
+                    )
                 PressedBorderColor: =RGBA(204, 204, 204, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(179, 179, 179, 1)

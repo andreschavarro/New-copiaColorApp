@@ -405,7 +405,15 @@ ColoresSeleccionados As screen:
                 );
                 
                 Set(link ,COAPP_PRD_PDF_2.Run(JSONPDF).link);
-                Launch(link)
+                Launch(link);
+                //colecciòn para recopilar cuantas veces  decargan un pdf
+                Collect(
+                    DatosUsoColorApp,
+                    {User:Text(User().FullName),
+                    TipoRegistro:"Ejecucion_Descarga_PDF",
+                    FechaHora:Now()}
+                )
+                
                 
                 
                 
