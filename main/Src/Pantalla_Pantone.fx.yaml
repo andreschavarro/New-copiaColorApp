@@ -2010,8 +2010,8 @@ Pantalla_Pantone As screen:
                 Icon: =Icon.Send
                 OnSelect: |-
                     =Office365Outlook.SendEmailV2(
-                        "jesgomez@crystal.com.co",
-                        "Ponga mas cuidado manito",  
+                        "",
+                        "",  
                         TextInput1_6.Text  
                     );
                     UpdateContext({varComentario: !varComentario})

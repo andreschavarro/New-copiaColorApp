@@ -764,8 +764,8 @@ Pantalla_RGB_ENEAS As screen:
                 Icon: =Icon.Send
                 OnSelect: |-
                     =Office365Outlook.SendEmailV2(
-                        "jesgomez@crystal.com.co",
-                        "Ponga mas cuidado manito",  
+                        "",
+                        "",  
                         TextInput1_9.Text  
                     );
                     UpdateContext({VarComentario: !VarComentario})

@@ -1095,8 +1095,8 @@ Colores_Crystal As screen:
                 Icon: =Icon.Send
                 OnSelect: |-
                     =Office365Outlook.SendEmailV2(
-                        "jesgomez@crystal.com.co",
-                        "Ponga mas cuidado manito",  
+                        "",
+                        "",  
                         TextInput1_7.Text  
                     );
                     UpdateContext({varComentario: !varComentario})

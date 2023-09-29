@@ -642,7 +642,8 @@ Pantalla_Vanisados As screen:
         OnSelect: =Set(cuadroVisible,false)
         TemplateSize: =190
         Visible: =varRegistros
-        Width: =1565
+        Width: =1525
+        X: =40
         Y: =295
         ZIndex: =4
 
@@ -6092,8 +6093,8 @@ Pantalla_Vanisados As screen:
                 Icon: =Icon.Send
                 OnSelect: |-
                     =Office365Outlook.SendEmailV2(
-                        "jesgomez@crystal.com.co",
-                        "Ponga mas cuidado manito",  
+                        "",
+                        "",  
                         TextInput1_8.Text  
                     );
                     UpdateContext({varComentario: !varComentario})
