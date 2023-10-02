@@ -441,7 +441,7 @@ Colores_Crystal As screen:
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(212, 212, 212, 1)
             Items: |-
-                =["Algodon","Nylon"]
+                =["Algodon","Nylon","Algodon 20/1"]
                 //Distinct(GestionVanisadosDEV ; materiaPrima)
             OnChange: |-
                 =Set(var_mat,Text(Self.Selected.Value));
@@ -572,6 +572,17 @@ Colores_Crystal As screen:
                     IsBlank(DropdownColores.Selected.Value) || principalColor = DropdownColores.Selected.Value,
                     algodon = "si"
                 ),
+                "Algodon 20/1",
+                Filter(
+                     colorCalceteriaDev,
+                    IsBlank(colorInput.Text) || coColor = colorInput.Text,
+                    IsBlank(codigoInput.Text) || coMaterial = codigoInput.Text,
+                    IsBlank(DropdownColores.Selected.Value) || principalColor = DropdownColores.Selected.Value &&
+                    (algodon  ="110004270" || algodon = "110004671" || algodon ="110004628"|| algodon = "110004601"||algodon="110005602"||
+                        algodon = "110004271"||algodon ="110004272"
+                    )
+            
+                ),
                 "Nylon",
                 Filter(
                     colorCalceteriaDev,
@@ -580,12 +591,16 @@ Colores_Crystal As screen:
                     IsBlank(DropdownColores.Selected.Value) || principalColor = DropdownColores.Selected.Value,
                     nylon = "si"
                 ),
+            
                 Filter(
                     colorCalceteriaDev,
                     IsBlank(colorInput.Text) || coColor = colorInput.Text,
                     IsBlank(codigoInput.Text) || coMaterial = codigoInput.Text,
                     IsBlank(DropdownColores.Selected.Value) || principalColor = DropdownColores.Selected.Value
                 )
+            
+            
+            
                 
             )
         Layout: =Layout.Vertical
