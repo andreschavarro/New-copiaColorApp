@@ -1302,7 +1302,7 @@ Pantalla_Vanisados As screen:
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
-                Visible: =If(color_var = ThisItem.V442, false, true) And bombillo
+                Visible: =If(color_var = ThisItem.V442, false, true)
                 Width: =25
                 X: =279
                 Y: =133
