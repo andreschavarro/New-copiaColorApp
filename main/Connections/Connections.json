@@ -184,27 +184,7 @@
     "dependents": [],
     "id": "7df666c6-7d79-4d58-b33b-d82d977c2d79"
   },
-  "b6965406-cef4-4463-b637-dee95013238d": {
-    "appActions": [
-      "SendEmailV2"
-    ],
-    "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "Office\u00A0365 Outlook",
-      "iconUri": "https://connectoricons-prod.azureedge.net/u/henryorsborn/partial-builds/asev3migrations-with-resourceTemplate/1.0.1653.3403/office365/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_office365",
-      "parameterHints": {},
-      "parameterHintsV2": {}
-    },
-    "datasets": {},
-    "dataSources": [
-      "Office365Outlook"
-    ],
-    "dependencies": {},
-    "dependents": [],
-    "id": "b6965406-cef4-4463-b637-dee95013238d"
-  },
-  "db1b5199-557c-4cc1-9435-c18a28ba4bd9": {
+  "a76b119a-4774-46b2-a118-33edcebb9f93": {
     "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
@@ -228,7 +208,27 @@
     ],
     "dependencies": {},
     "dependents": [],
-    "id": "db1b5199-557c-4cc1-9435-c18a28ba4bd9"
+    "id": "a76b119a-4774-46b2-a118-33edcebb9f93"
+  },
+  "b6965406-cef4-4463-b637-dee95013238d": {
+    "appActions": [
+      "SendEmailV2"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office\u00A0365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/henryorsborn/partial-builds/asev3migrations-with-resourceTemplate/1.0.1653.3403/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Outlook"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "b6965406-cef4-4463-b637-dee95013238d"
   },
   "edc77e13-1f26-48be-8b03-e8764365b744": {
     "appActions": [],

@@ -1252,7 +1252,7 @@ Pantalla_Pantone As screen:
                                 ),
                                 codigomaterial: Text(ThisItem.Value.coMaterial),
                                 nombrecolor: Text(ThisItem.Value.colorName),
-                                pantone: selectedPantone,
+                                pantone: Text(selectedPantoneVar),
                                 colorcrystal: Text(ThisItem.Value.coColor),
                                 alternativa: Text(ThisItem.Value.index),
                                 colorBuscado: selectedRGB
@@ -1315,7 +1315,7 @@ Pantalla_Pantone As screen:
                                 ),
                                 codigomaterial: Text(ThisItem.Value.coMaterial),
                                 nombrecolor: Text(ThisItem.Value.colorName),
-                                pantone: selectedPantone,
+                                pantone: Text(selectedPantoneVar),
                                 colorcrystal: Text(ThisItem.Value.coColor),
                                 alternativa: Text(ThisItem.Value.index),
                                 colorBuscado: selectedRGB
