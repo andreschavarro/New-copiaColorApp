@@ -851,7 +851,7 @@ Pantalla_Vanisados As screen:
                 HoverColor: =RGBA(184, 149, 9, 1)
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Icon: =Icon.Lightbulb
-                OnSelect: |+
+                OnSelect: |-
                     =Set(
                         contenedorVisible,
                         true
@@ -881,27 +881,16 @@ Pantalla_Vanisados As screen:
                         VarOcultar,
                         false
                     );
-                    
                     Set(
                         CodigoSap,
                         First(
                             Filter(
                                 colorCalceteriaDev,
-                                coColor = ThisItem.V782,
-                                 coMaterial = "110004280" ||
-                                 coMaterial = "110004281" ||
-                                 coMaterial = "110004282" ||
-                                 coMaterial = "110005222"
-                       
-                                
+                                coColor = ThisItem.V782 &&
+                               ( coMaterial = "110004280" || coMaterial = "110004281" || coMaterial = "110004282" || coMaterial = "110005222")
                             )
-                        ).coMaterial      
+                        ).coMaterial
                     )
-                    
-                    
-                    
-                    
-                    
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
@@ -1071,20 +1060,14 @@ Pantalla_Vanisados As screen:
                 Font: =Font.'Segoe UI'
                 Height: =14
                 Size: =9.25
-                Text: |
-                    =First(
-                            Filter(
-                                colorCalceteriaDev,
-                                coColor = ThisItem.V782 ,
-                                 coMaterial = "110004280" ||
-                                 coMaterial = "110004281" ||
-                                 coMaterial = "110004282" ||
-                                 coMaterial = "110005222"
-                       
-                                
-                            )
-                    ).coMaterial     
-                         
+                Text: |-
+                    =First(        //traigame el primero de la fila
+                        Filter(   //filtreme en la base de datos colorcalceteriadev
+                            colorCalceteriaDev,
+                            coColor = ThisItem.V782 && //que cuando  el colcor sea igual al item del vanisado 78/2  y comaterial sea igual a este codigo  
+                            (coMaterial = "110004280" || coMaterial = "110004281" || coMaterial = "110004282" || coMaterial = "110005222")
+                        )
+                    ).coMaterial // traigame el codigo sap que tengo en la lista 
                 Width: =103
                 X: =132
                 Y: =138
@@ -1324,7 +1307,7 @@ Pantalla_Vanisados As screen:
                         First(
                             Filter(
                                 colorCalceteriaDev,
-                                coColor = ThisItem.V442 , coMaterial = "110004360" || coMaterial = "110004361" || coMaterial = "110004362"
+                                coColor = ThisItem.V442 && (coMaterial = "110004360" || coMaterial = "110004361" || coMaterial = "110004362")
                             )
                         ).coMaterial
                     )
@@ -1504,7 +1487,7 @@ Pantalla_Vanisados As screen:
                     =First(
                         Filter(
                             colorCalceteriaDev,
-                            coColor = ThisItem.V442 , coMaterial = "110004360" || coMaterial = "110004361" || coMaterial = "110004362"
+                            coColor = ThisItem.V442 && (coMaterial = "110004360" || coMaterial = "110004361" || coMaterial = "110004362")
                         )
                     ).coMaterial
                 Width: =88
@@ -1890,42 +1873,6 @@ Pantalla_Vanisados As screen:
                 Y: =118
                 ZIndex: =13
 
-            Label28_1 As label:
-                Align: =Align.Center
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                Height: =14
-                Size: =9.25
-                Text: =LookUp(colorCalceteriaDev, coColor = ThisItem.elastico).coMaterial
-                Width: =88
-                X: =130
-                Y: =140
-                ZIndex: =14
-
-            Label28_2 As label:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Bold
-                Height: =14
-                Size: =9.25
-                Text: =
-                Width: =88
-                X: =139
-                Y: =140
-                ZIndex: =15
-
         contenedorTarjetaLycra As groupContainer.manualLayoutContainer:
             BorderColor: =RGBA(230, 230, 230, 1)
             BorderThickness: =1
@@ -2274,23 +2221,6 @@ Pantalla_Vanisados As screen:
                 X: =130
                 Y: =118
                 ZIndex: =13
-
-            Label30 As label:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                Height: =14
-                Size: =9.25
-                Text: =LookUp(colorCalceteriaDev, coColor = ThisItem.lycra).coMaterial
-                Width: =88
-                X: =139
-                Y: =140
-                ZIndex: =14
 
         "'ConAlerta78/2' As groupContainer.manualLayoutContainer":
             BorderColor: =RGBA(230, 230, 230, 1)
@@ -6216,21 +6146,6 @@ Pantalla_Vanisados As screen:
                 X: =8
                 Y: =360
                 ZIndex: =18
-
-            Label24 As label:
-                BorderColor: =RGBA(255, 255, 255, 1)
-                BorderThickness: =2
-                Color: =RGBA(255, 255, 255, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Fill: =RGBA(0, 0, 0, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                Size: =13
-                Text: =CodigoSap
-                X: =481
-                Y: =212
-                ZIndex: =19
 
         Container2_3 As groupContainer.manualLayoutContainer:
             BorderColor: =RGBA(153, 153, 153, 1)
