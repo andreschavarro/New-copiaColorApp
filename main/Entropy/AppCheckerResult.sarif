@@ -5830,6 +5830,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Pantalla_Vanisados.ContainerBase.ContainerRecomendado.Label3_9.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Pantalla_Vanisados.ContainerBase.ContainerRecomendado.Label3_9.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Pantalla_Vanisados",
+                "type": "Pantalla_Vanisados.ContainerBase.ContainerRecomendado.Label3_9"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Pantalla_Vanisados.ContainerBase.ContainerRecomendado.Dropdown1_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Pantalla_Vanisados.ContainerBase.ContainerRecomendado.Dropdown1_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Pantalla_Vanisados",
+                "type": "Pantalla_Vanisados.ContainerBase.ContainerRecomendado.Dropdown1_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Pantalla_Vanisados.ContainerBase.ContainerRecomendado.Icon6.AccessibleLabel"
                 }
               ],
@@ -5903,66 +5963,6 @@
                 "member": "AccessibleLabel",
                 "module": "Pantalla_Vanisados",
                 "type": "Pantalla_Vanisados.ContainerBase.ContainerRecomendado.Dropdown1_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Pantalla_Vanisados.ContainerBase.ContainerRecomendado.Label3_9.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Pantalla_Vanisados.ContainerBase.ContainerRecomendado.Label3_9.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Pantalla_Vanisados",
-                "type": "Pantalla_Vanisados.ContainerBase.ContainerRecomendado.Label3_9"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Pantalla_Vanisados.ContainerBase.ContainerRecomendado.Dropdown1_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Pantalla_Vanisados.ContainerBase.ContainerRecomendado.Dropdown1_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Pantalla_Vanisados",
-                "type": "Pantalla_Vanisados.ContainerBase.ContainerRecomendado.Dropdown1_1"
               }
             }
           ],
@@ -6100,36 +6100,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Pantalla_Vanisados.ContainerBase.Container2_3.Icon1_5.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Pantalla_Vanisados.ContainerBase.Container2_3.Icon1_5.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Pantalla_Vanisados",
-                "type": "Pantalla_Vanisados.ContainerBase.Container2_3.Icon1_5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Pantalla_Vanisados.ContainerBase.Container2_3.Icon1_5.AccessibleLabel"
                 }
               ],
@@ -6154,6 +6124,36 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Pantalla_Vanisados.ContainerBase.Container2_3.Icon1_5.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Pantalla_Vanisados.ContainerBase.Container2_3.Icon1_5.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Pantalla_Vanisados",
+                "type": "Pantalla_Vanisados.ContainerBase.Container2_3.Icon1_5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -10630,6 +10630,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.varCodigoSap"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varCodigoSap",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varCodigoSap",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.cuota"
                 }
               ],
@@ -11446,7 +11476,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Los controles consumen recursos y, si una pantalla tiene demasiados controles, la aplicación puede dejar de responder o ralentizarse. La complejidad estimada de \"Pantalla_Vanisados\" es 830, que es superior al umbral máximo recomendado (300)."
+                "whyFix": "Los controles consumen recursos y, si una pantalla tiene demasiados controles, la aplicación puede dejar de responder o ralentizarse. La complejidad estimada de \"Pantalla_Vanisados\" es 831, que es superior al umbral máximo recomendado (300)."
               }
             }
           ],
