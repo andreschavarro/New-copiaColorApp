@@ -111,11 +111,11 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "678a0dc6-9c60-4d33-8324-1fda1435216d",
-    "Id": "0048fdbf-615f-4c34-9766-db516bbb4e72",
+    "Id": "85e10452-db7f-4658-81b2-df6c982cc107",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
     "ManualOfflineProfileId": "",
-    "Name": "ColorAppCopia",
+    "Name": "ColorAppCopia.msapp",
     "OriginatingVersion": "1.326",
     "ParserErrorCount": 0,
     "ShowStatusBar": false
