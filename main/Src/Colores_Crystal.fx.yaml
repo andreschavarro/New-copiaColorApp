@@ -567,38 +567,38 @@ Colores_Crystal As screen:
                 "Algodon",
                 Filter(
                     colorCalceteriaDev,
-                    IsBlank(colorInput.Text) || coColor = colorInput.Text,
-                    IsBlank(codigoInput.Text) || coMaterial = codigoInput.Text,
-                    IsBlank(DropdownColores.Selected.Value) || principalColor = DropdownColores.Selected.Value,
+                    IsBlank(colorInput.Text) || coColor = colorInput.Text&&
+                    IsBlank(codigoInput.Text) || coMaterial = codigoInput.Text&&
+                    IsBlank(DropdownColores.Selected.Value) || principalColor = DropdownColores.Selected.Value&&
                     algodon = "si"
                 ),
                 "Algodon 20/1",
                 Filter(
                      colorCalceteriaDev,
-                    IsBlank(colorInput.Text) || coColor = colorInput.Text,
-                    IsBlank(codigoInput.Text) || coMaterial = codigoInput.Text,
+                    IsBlank(colorInput.Text) || coColor = colorInput.Text&&
+                    IsBlank(codigoInput.Text) || coMaterial = codigoInput.Text&&
                     IsBlank(DropdownColores.Selected.Value) || principalColor = DropdownColores.Selected.Value &&
                     (  
-                        coMaterial="110004270" ||coMaterial= "110004671" ||coMaterial="110004628"||coMaterial= "110004601"||
-                        coMaterial="110005602"||coMaterial= "110004271"||coMaterial="110004272"
+                        coMaterial="110004270"||coMaterial="110004671"||coMaterial="110004628"||coMaterial="110004601"||
+                        coMaterial="110005602"||coMaterial="110004271"||coMaterial="110004272"
                         
-                    ),
-                    algodon="Si"
+                    )&&
+                    algodon="si"
             
                 ),
                  "Algodon 30/1",
                 Filter(
                      colorCalceteriaDev,
-                    IsBlank(colorInput.Text) || coColor = colorInput.Text,
-                    IsBlank(codigoInput.Text) || coMaterial = codigoInput.Text,
+                    IsBlank(colorInput.Text) || coColor = colorInput.Text &&
+                    IsBlank(codigoInput.Text) || coMaterial = codigoInput.Text &&
                     IsBlank(DropdownColores.Selected.Value) || principalColor = DropdownColores.Selected.Value &&
                     (  
-                        coMaterial="110004096" ||coMaterial="110004134"||coMaterial="110004824"||coMaterial="110005105"||coMaterial="110005451"||
+                        coMaterial="110004096"||coMaterial="110004134"||coMaterial="110004824"||coMaterial="110005105"||coMaterial="110005451"||
                         coMaterial="110005483"||coMaterial="110005627"||coMaterial="110005645"||coMaterial= "110005715"||coMaterial= "110005716"||
                         coMaterial="110005332"||coMaterial="110004250"||coMaterial="110004260"||coMaterial="110004261"||coMaterial="110004820"
                         
-                    ),
-                    algodon="Si"
+                    )&&
+                    algodon="si"
             
                 ),
                 "Nylon",

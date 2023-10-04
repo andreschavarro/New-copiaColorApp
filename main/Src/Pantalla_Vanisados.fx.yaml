@@ -5700,7 +5700,7 @@ Pantalla_Vanisados As screen:
                 Size: =13
                 Text: ="Tipo vanisado"
                 X: =8
-                Y: =181
+                Y: =231
                 ZIndex: =1
 
             Label3_1 As label:
@@ -5716,7 +5716,7 @@ Pantalla_Vanisados As screen:
                 Size: =13
                 Text: ="Vanisado actual"
                 X: =8
-                Y: =246
+                Y: =296
                 ZIndex: =2
 
             Label3_6 As label:
@@ -5732,7 +5732,7 @@ Pantalla_Vanisados As screen:
                 Size: =13
                 Text: ="Materia prima"
                 X: =8
-                Y: =116
+                Y: =166
                 ZIndex: =3
 
             Label3_7 As label:
@@ -5748,7 +5748,7 @@ Pantalla_Vanisados As screen:
                 Text: =Varvanizadoactual
                 Width: =180
                 X: =196
-                Y: =246
+                Y: =296
                 ZIndex: =4
 
             Label3_8 As label:
@@ -5764,7 +5764,7 @@ Pantalla_Vanisados As screen:
                 Text: =VarTipovanizado
                 Width: =180
                 X: =196
-                Y: =181
+                Y: =231
                 ZIndex: =5
 
             Label3_9 As label:
@@ -5784,7 +5784,7 @@ Pantalla_Vanisados As screen:
                     =If(!IsBlank(VarMateriaP),true,false) And !sugMaterial
                 Width: =180
                 X: =196
-                Y: =124
+                Y: =174
                 ZIndex: =6
 
             Label3_10 As label:
@@ -5800,7 +5800,7 @@ Pantalla_Vanisados As screen:
                 Size: =13
                 Text: ="Color Crystal"
                 X: =8
-                Y: =60
+                Y: =110
                 ZIndex: =7
 
             Label3_11 As label:
@@ -5816,7 +5816,7 @@ Pantalla_Vanisados As screen:
                 Text: =VarCodCrystal
                 Width: =180
                 X: =196
-                Y: =60
+                Y: =110
                 ZIndex: =8
 
             TextInput2 As text:
@@ -5858,7 +5858,7 @@ Pantalla_Vanisados As screen:
                     =true
                 Width: =180
                 X: =196
-                Y: =301
+                Y: =351
                 ZIndex: =9
 
             Label3_12 As label:
@@ -5874,7 +5874,7 @@ Pantalla_Vanisados As screen:
                 Size: =13
                 Text: ="Recomendado"
                 X: =8
-                Y: =302
+                Y: =352
                 ZIndex: =10
 
             Label3_13 As label:
@@ -5961,7 +5961,7 @@ Pantalla_Vanisados As screen:
                             Tipo_vanisado: Label3_8.Text,
                             Vanisado_Actual: Label3_7.Text,
                             vanisado_recomendado: TextInput2.Text,
-                            Codigo_SAP: Label10.Text,
+                            //Codigo_SAP: Label10.Text;
                             Estado: "pendiente"
                         }
                     );
@@ -6063,7 +6063,7 @@ Pantalla_Vanisados As screen:
                 PressedFill: =RGBA(0, 0, 0, 0)
                 Width: =35
                 X: =392
-                Y: =124
+                Y: =114
                 ZIndex: =15
 
             Dropdown1_2 As dropdown:
@@ -6114,38 +6114,6 @@ Pantalla_Vanisados As screen:
                 X: =196
                 Y: =126
                 ZIndex: =16
-
-            Label10 As label:
-                Align: =Align.Center
-                BorderColor: =RGBA(255, 255, 255, 1)
-                BorderThickness: =1
-                Color: =RGBA(255, 255, 255, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                Size: =13
-                Text: =CodigoSap
-                Width: =180
-                X: =196
-                Y: =360
-                ZIndex: =17
-
-            Label8 As label:
-                Align: =Align.Center
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(255, 255, 255, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                Size: =13
-                Text: ="Codigo SAP"
-                X: =8
-                Y: =360
-                ZIndex: =18
 
         Container2_3 As groupContainer.manualLayoutContainer:
             BorderColor: =RGBA(153, 153, 153, 1)
